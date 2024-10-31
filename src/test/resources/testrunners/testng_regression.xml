@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="API Regression Suite" verbose="3">
+
+	<!-- <suite name="API Regression Suite" verbose="3" parallel="tests" thread-count="3"> -->
+
+
+	<test name="GET User Test">
+		<!-- <parameter name="baseUrl" value="https://gorest.co.in" /> -->
+
+		<classes>
+			<class name="com.qa.api.tests.GetUserTest" />
+		</classes>
+	</test>
+
+	<test name="CREATE User Test">
+
+		<classes>
+			<class name="com.qa.api.tests.PostCreateTest" />
+		</classes>
+	</test>
+
+	<test name="UPDATE User Test">
+
+
+		<classes>
+			<class name="com.qa.api.tests.PUTUpdateUserTest" />
+		</classes>
+	</test>
+
+	<test name="REQRES User Test">
+
+
+		<classes>
+			<class name="com.qa.api.reqres.SingleuserGET" />
+		</classes>
+	</test>
+
+	<test name="PATCH User Test">
+
+
+		<classes>
+			<class name="com.qa.api.tests.PatchUserTest" />
+		</classes>
+	</test>
+
+	<test name="DELETE User Test">
+
+
+		<classes>
+			<class name="com.qa.api.tests.DeleteUserTest" />
+		</classes>
+	</test>
+
+
+	<test name="Scheme Validator FakeStore product User Test">
+
+
+		<classes>
+			<class
+				name="com.qa.api.schemaValidatorTest.SchemaValidatorFakeStoreProductTest" />
+		</classes>
+	</test>
+
+
+
+	<!-- <test name="Single user not found Test"> <classes> <class name="com.qa.api.reqres.Singleusernotfound" 
+		/> </classes> </test> -->
+
+	<!-- <test name="Contact Credentials Test"> <classes> <class name="com.qa.api.contacts.ContactsTest" 
+		/> </classes> </test> -->
+
+
+	<!-- <test name="Deserialize Product APi Test"> <classes> <class name="com.qa.api.tests.DeserializatioTest_GetProducts" 
+		/> </classes> </test> -->
+
+
+
+</suite>
