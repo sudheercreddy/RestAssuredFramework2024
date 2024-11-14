@@ -93,6 +93,12 @@
 			<version>2.5.3</version>
 		</dependency>
 
+		<dependency>
+			<groupId>org.wiremock</groupId>
+			<artifactId>wiremock</artifactId>
+			<version>3.9.2</version>
+		</dependency>
+
 
 	</dependencies>
 
