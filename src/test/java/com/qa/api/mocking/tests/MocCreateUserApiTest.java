@@ -20,13 +20,29 @@ public class MocCreateUserApiTest extends BaseTest{
 	public void dummyCreateUSerTest() {
 		ApiMocks.createDummyUser();
 		
-		
-		Response  response =restClient.post(BASE_URL_LOCALHOST, BASE_URL_LOCALHOST_ENDPOINT, null, null, null, AuthType.NO_AUTH, ContentType.JSON);
+		String dummyJson="{\"name\": \"tom\"}";
+		Response  response =restClient.post(BASE_URL_LOCALHOST, "/api/users", dummyJson, null, null, AuthType.NO_AUTH, ContentType.JSON);
 	
 		response.
-			then().
-					statusCode(201)
+			then().assertThat().and()
+					.statusLine(equalTo("HTTP/1.1 201 user is created"))
 								.body("id", equalTo(1));
+		
+		
+	}
+	
+	
+	@Test
+	public void dummyCreateUSerwithBodyFileTest() {
+		ApiMocks.createDummyUserwithBodyFile();
+		
+		String dummyJson="{\"name\": \"api\"}";
+		Response  response =restClient.post(BASE_URL_LOCALHOST, "/api/users", dummyJson, null, null, AuthType.NO_AUTH, ContentType.JSON);
+	
+		response.
+			then().assertThat().and()
+					.statusLine(equalTo("HTTP/1.1 201 user is created"))
+								.body("id", equalTo(101));
 		
 		
 	}

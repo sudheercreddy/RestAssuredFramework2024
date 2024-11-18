@@ -30,5 +30,34 @@ public class MockGetUserApiTest extends BaseTest{
 		
 		
 	}
+	
+	
+	
+	@Test
+	public void dummyGetUSerWithJsonFileTest() {
+		ApiMocks.getDummyUserWithJsonFile();
+		Response  response = restClient.get(BASE_URL_LOCALHOST, BASE_URL_LOCALHOST_ENDPOINT, null, null, AuthType.NO_AUTH, ContentType.JSON);
+	//	Assert.assertEquals(response.statusCode(), 200);
+		
+		response.
+			then().
+					statusCode(200)
+								.body("name", equalTo("sudheer"));
+		
+		
+	}
 
+	
+	/*
+	 * @Test public void dummyGetUSerWithQUERYPARAMTest() {
+	 * ApiMocks.getDummyUserWithQueryParams(); Response response =
+	 * restClient.get(BASE_URL_LOCALHOST, BASE_URL_LOCALHOST_ENDPOINT, null, null,
+	 * AuthType.NO_AUTH, ContentType.JSON); //
+	 * Assert.assertEquals(response.statusCode(), 200);
+	 * 
+	 * response. then(). statusCode(200) .body("name", equalTo("sudheer"));
+	 * 
+	 * 
+	 * }
+	 */
 }
