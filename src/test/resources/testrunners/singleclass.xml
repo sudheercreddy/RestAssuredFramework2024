@@ -5,15 +5,20 @@
 
 	<!-- <suite name="API Regression Suite" verbose="3" parallel="tests" thread-count="3"> -->
 
-	
-
-	
-	
-		<test name="JsonPath Validator JayWay Product  APi Test">
+	<test name="JsonPath Validator JayWay Product  APi Test">
 
 		<classes>
 			<class name="com.qa.products.api.tests.ProductApiTestJsonPathValidator" />
 		</classes>
+		
+	</test>
+	
+	<test name="JsonPath Validator JayWay Product  APi Test2">
+
+		<classes>
+			<class name="com.qa.products.api.tests.ProductsTests" />
+		</classes>
+		
 	</test>
 	
 	

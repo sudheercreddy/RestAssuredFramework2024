@@ -43,9 +43,10 @@ public class RestClient {
 	 * @param authType    -BEARER_TOKEN, OAUTH2, BASCI_AUTH, API_KEY, NO_AUTH
 	 * @param contentType - JSON,XML,FORM
 	 * @return it return Get API Request
+	 * @throws FrameworkExceptions 
 	 */
 
-	private RequestSpecification setupRequest(String baseUrl, AuthType authType, ContentType contentType) {
+	private RequestSpecification setupRequest(String baseUrl, AuthType authType, ContentType contentType) throws FrameworkExceptions {
 
 		RequestSpecification request = RestAssured.given().log().all().baseUri(baseUrl).contentType(contentType)
 				.accept(contentType);
@@ -124,9 +125,10 @@ public class RestClient {
 	 * @param authType
 	 * @param contentType
 	 * @return Response
+	 * @throws FrameworkExceptions 
 	 */
 	public Response get(String baseUrl, String endPoint, Map<String, String> queryParams,
-			Map<String, String> pathparams, AuthType authType, ContentType contentType) {
+			Map<String, String> pathparams, AuthType authType, ContentType contentType) throws FrameworkExceptions {
 
 		RequestSpecification request = setUpAuthAndContentType(baseUrl, authType, contentType);
 
@@ -149,9 +151,10 @@ public class RestClient {
 	 * @param authType
 	 * @param contentType
 	 * @return post Response
+	 * @throws FrameworkExceptions 
 	 */
 	public <T> Response post(String baseUrl, String endPoint, T body, Map<String, String> queryParams,
-			Map<String, String> pathparams, AuthType authType, ContentType contentType) {
+			Map<String, String> pathparams, AuthType authType, ContentType contentType) throws FrameworkExceptions {
 
 		RequestSpecification request = setUpAuthAndContentType(baseUrl, authType, contentType);
 
@@ -200,6 +203,7 @@ public class RestClient {
 	 * @param authType
 	 * @param contentType
 	 * @return
+	 * @throws FrameworkExceptions 
 	 *//*
 		 * public Response post(String endPoint, File file, Map<String, String>
 		 * queryParams, Map<String, String> pathparams, AuthType authType, ContentType
@@ -218,7 +222,7 @@ public class RestClient {
 		 */
 
 	public <T> Response put(String baseUrl, String endPoint, T body, Map<String, String> queryParams,
-			Map<String, String> pathparams, AuthType authType, ContentType contentType) {
+			Map<String, String> pathparams, AuthType authType, ContentType contentType) throws FrameworkExceptions {
 
 		RequestSpecification request = setUpAuthAndContentType(baseUrl, authType, contentType);
 
@@ -230,7 +234,7 @@ public class RestClient {
 	}
 
 	public <T> Response patch(String baseUrl, String endPoint, T body, Map<String, String> queryParams,
-			Map<String, String> pathparams, AuthType authType, ContentType contentType) {
+			Map<String, String> pathparams, AuthType authType, ContentType contentType) throws FrameworkExceptions {
 
 		RequestSpecification request = setUpAuthAndContentType(baseUrl, authType, contentType);
 
@@ -242,7 +246,7 @@ public class RestClient {
 	}
 
 	public Response delete(String baseUrl, String endPoint, Map<String, String> queryParams,
-			Map<String, String> pathparams, AuthType authType, ContentType contentType) {
+			Map<String, String> pathparams, AuthType authType, ContentType contentType) throws FrameworkExceptions {
 
 		RequestSpecification request = setUpAuthAndContentType(baseUrl, authType, contentType);
 
@@ -278,8 +282,9 @@ public class RestClient {
 	 * @param authType
 	 * @param contentType
 	 * @return
+	 * @throws FrameworkExceptions 
 	 */
-	private RequestSpecification setUpAuthAndContentType(String baseUrl, AuthType authType, ContentType contentType) {
+	private RequestSpecification setUpAuthAndContentType(String baseUrl, AuthType authType, ContentType contentType) throws FrameworkExceptions {
 		return setupRequest(baseUrl, authType, contentType);
 
 	}

@@ -1,4 +1,4 @@
-package com.qa.api.tests;
+package com.qa.api.goresttests;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;

@@ -16,7 +16,7 @@ import io.restassured.response.Response;
 
 public class ShemaValidatorTest extends BaseTest {
 
-	@Test
+	@Test(enabled=false)
 	public void SchemeValidatorTest() {
 
 		

@@ -1,4 +1,4 @@
-package com.qa.api.tests;
+package com.qa.api.goresttests;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -15,7 +15,6 @@ import io.restassured.response.Response;
 public class GetUserTest extends BaseTest {
 	
 	
-
 	@Test(priority = 1)
 	public void getUsersTest() {
 
@@ -27,7 +26,7 @@ public class GetUserTest extends BaseTest {
 				ContentType.JSON);
 		Assert.assertEquals(response.statusCode(), 200);
 		
-		//int userID= response.jsonPath().get("id");
+		
 		
 	}
 	
@@ -35,7 +34,7 @@ public class GetUserTest extends BaseTest {
 	@Test(enabled=false )
 	public void getsingleUserTest() {
 
-		Response response = restClient.get(BASE_URL_GOREST,"/public/v2/users/"+7483633, null, null, AuthType.BEARER_TOKEN,
+		Response response = restClient.get(BASE_URL_GOREST,"/public/v2/users/"+"userid", null, null, AuthType.BEARER_TOKEN,
 				ContentType.JSON);
 		Assert.assertEquals(response.statusCode(), 200);
 	}

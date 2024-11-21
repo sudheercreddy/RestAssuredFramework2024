@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="GO REST API Regression Suite" verbose="3">
+
+	<!-- <suite name="API Regression Suite" verbose="3" parallel="tests" thread-count="3"> -->
+
+	<test name="Retrieve USers go rest GET APi Test">
+
+		<classes>
+			<class name="com.qa.api.goresttests.GetUserTest" />
+		</classes>
+		
+	</test>
+	
+	<test name="Create USers go rest POST APi Test">
+
+		<classes>
+			<class name="com.qa.api.goresttests.PostCreateTest" />
+		</classes>
+		
+	</test>
+	
+	<test name="PUT  USers go rest POST APi Test">
+
+		<classes>
+			<class name="com.qa.api.goresttests.PUTUpdateUserTest" />
+		</classes>
+		
+	</test>
+	
+	<test name="PATCH USers go rest POST APi Test">
+
+		<classes>
+			<class name="com.qa.api.goresttests.PatchUserTest" />
+		</classes>
+		
+	</test>
+	
+	<!-- <test name="JsonPath Validator JayWay Product  APi Test2">
+
+		<classes>
+			<class name="com.qa.products.api.tests.ProductsTests" />
+		</classes>
+		
+	</test> -->
+	
+	
+	
+	
+	
+	
+
+
+
+</suite>

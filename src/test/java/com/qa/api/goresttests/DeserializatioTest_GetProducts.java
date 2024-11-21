@@ -1,4 +1,4 @@
-package com.qa.api.tests;
+package com.qa.api.goresttests;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -14,7 +14,7 @@ import io.restassured.response.Response;
 public class DeserializatioTest_GetProducts extends BaseTest {
 
 	@Test(enabled=false)
-	public void getProducts() {
+	public void getProducts() throws Exception  {
 
 		Response res = restClient.get(BASE_URL_GOREST,"/products", null, null, AuthType.NO_AUTH, ContentType.JSON);
 

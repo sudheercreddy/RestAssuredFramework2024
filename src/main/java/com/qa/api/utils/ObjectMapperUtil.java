@@ -17,14 +17,15 @@ public class ObjectMapperUtil {
 	 * @param response
 	 * @param targetClass
 	 * @return
+	 * @throws Exception 
 	 */
-	public static <T>  T deSerialization(Response response, Class<T>targetClass) {
+	public static <T>  T deSerialization(Response response, Class<T>targetClass) throws Exception {
 		
 		try {
 			return objMapper.readValue(response.getBody().asString(), targetClass);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			throw new RuntimeException("Deserialization failed ....."+ targetClass.getName());
+			throw new Exception("Deserialization failed ....."+ targetClass.getName());
 		}
 		
 		

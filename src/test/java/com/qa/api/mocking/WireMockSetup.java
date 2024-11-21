@@ -16,7 +16,7 @@ public class WireMockSetup {
 	}
 
 	public static void stopWireMockServer() {
-		server.start();
+		server.stop();
 
 	}
 
