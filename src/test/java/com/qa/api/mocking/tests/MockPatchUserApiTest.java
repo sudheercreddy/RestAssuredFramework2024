@@ -23,7 +23,7 @@ public class MockPatchUserApiTest extends BaseTest{
 	
 		response.
 			then().assertThat().and()
-					.statusLine(equalTo("HTTP/1.1 200 user is created"))
+					.statusLine(equalTo("HTTP/1.1 201 user is created"))
 								.body("id", equalTo(1));
 		
 		

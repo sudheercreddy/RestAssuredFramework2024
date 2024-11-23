@@ -45,6 +45,57 @@
 		
 	</test> -->
 	
+	<test name="JsonPath Validator JayWay Product  APi Test">
+
+		<classes>
+			<class name="com.qa.products.api.tests.ProductApiTestJsonPathValidator" />
+		</classes>
+		
+	</test>
+	
+	<test name="JsonPath Validator JayWay Product  APi Test2">
+
+		<classes>
+			<class name="com.qa.products.api.tests.ProductsTests" />
+		</classes>
+		
+	</test>
+	
+<!-- 	MOCKING TEST CASES //// -->
+	
+	
+		<test name="Mockicg MocCreateUserApiTest APi Test">
+
+		<classes>
+			<class name="com.qa.api.mocking.tests.MocCreateUserApiTest" />
+		</classes>
+		
+	</test>
+	
+	<test name="MockGetUserApiTest APi Test">
+
+		<classes>
+			<class name="com.qa.api.mocking.tests.MockGetUserApiTest" />
+		</classes>
+		
+	</test>
+	
+	<test name="MockGetUserApiTest  USers go rest POST APi Test">
+
+		<classes>
+			<class name="com.qa.api.mocking.tests.MockDeleteUserAPITest" />
+		</classes>
+		
+	</test>
+	
+	<test name="MockGetUserApiTest USers go rest POST APi Test">
+
+		<classes>
+			<class name="com.qa.api.mocking.tests.MockPatchUserApiTest" />
+		</classes>
+		
+	</test>
+	
 	
 	
 	

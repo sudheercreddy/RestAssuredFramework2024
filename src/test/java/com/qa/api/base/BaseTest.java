@@ -44,12 +44,12 @@ public class BaseTest {
 	public void setup() {
 
 	restClient = new RestClient();
-	//WireMockSetup.createWireMockServer();
+	WireMockSetup.createWireMockServer();
 	}
 
 	@AfterTest
 	public void stopServer() {
-	//WireMockSetup.stopWireMockServer();
+	WireMockSetup.stopWireMockServer();
 
 	}
 

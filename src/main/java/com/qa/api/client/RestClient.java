@@ -240,7 +240,7 @@ public class RestClient {
 
 		applyParams(request, queryParams, pathparams);
 
-		Response response = request.body(body).patch(endPoint).then().spec(responseSpec200).extract().response();
+		Response response = request.body(body).patch(endPoint).then().spec(responseSpec201or200).extract().response();
 		response.prettyPrint();
 		return response;
 	}

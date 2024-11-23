@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Mocking REST API Regression Suite" verbose="3">
+
+	<!-- <suite name="API Regression Suite" verbose="3" parallel="tests" thread-count="3"> -->
+
+	<test name="Mockicg MocCreateUserApiTest APi Test">
+
+		<classes>
+			<class name="com.qa.api.mocking.tests.MocCreateUserApiTest" />
+		</classes>
+		
+	</test>
+	
+	<test name="MockGetUserApiTest APi Test">
+
+		<classes>
+			<class name="com.qa.api.mocking.tests.MockGetUserApiTest" />
+		</classes>
+		
+	</test>
+	
+	<test name="PUT  USers go rest POST APi Test">
+
+		<classes>
+			<class name="com.qa.api.mocking.tests.MockDeleteUserAPITest" />
+		</classes>
+		
+	</test>
+	
+	<test name="PATCH USers go rest POST APi Test">
+
+		<classes>
+			<class name="com.qa.api.mocking.tests.MockPatchUserApiTest" />
+		</classes>
+		
+	</test>
+
+
+
+</suite>

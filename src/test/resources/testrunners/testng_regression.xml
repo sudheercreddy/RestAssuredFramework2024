@@ -6,13 +6,6 @@
 	<!-- <suite name="API Regression Suite" verbose="3" parallel="tests" thread-count="3"> -->
 
 
-	<test name="GET User Test">
-		<!-- <parameter name="baseUrl" value="https://gorest.co.in" /> -->
-
-		<classes>
-			<class name="com.qa.api.tests.GetUserTest" />
-		</classes>
-	</test>
 
 	<test name="CREATE User Test">
 
