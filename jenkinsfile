@@ -36,7 +36,7 @@ pipeline
         stage('Run Regression API Automation Test') {
             steps {
                 catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
-                    git 'https://github.com/naveenanimation20/July2024APIFramework.git'
+                    git 'https://github.com/sudheercreddy/RestAssuredFramework2024.git'
                     bat "mvn clean test -Dsurefire.suiteXmlFiles=src/test/resources/testrunners/testng_regression_GoRestNMockingCICD.xml"
                     
                 }
@@ -69,7 +69,7 @@ pipeline
         stage('Run Sanity API Automation Test') {
             steps {
                 catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
-                    git 'https://github.com/naveenanimation20/July2024APIFramework.git'
+                    git 'https://github.com/sudheercreddy/RestAssuredFramework2024.git'
                     bat "mvn clean test -Dsurefire.suiteXmlFiles=src/test/resources/testrunners/testng_sanityCICD.xml"
                     
                 }
