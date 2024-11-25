@@ -36,8 +36,8 @@ pipeline
         stage('Run Regression API Automation Test') {
             steps {
                 catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
-                    git 'https://github.com/naveenanimation20/July2024APIFramework.git'
-                    sh "mvn clean test -Dsurefire.suiteXmlFiles=src/test/resources/testrunners/testng_regression.xml"
+                    git 'https://github.com/sudheercreddy/RestAssuredFramework2024.git'
+                    sh "mvn clean test -Dsurefire.suiteXmlFiles=src/test/resources/testrunners/testng_regression_GoRestNMockingCICD.xml"
                     
                 }
             }
@@ -59,18 +59,6 @@ pipeline
         }
         
         
-        stage('Publish Regresion Extent Report'){
-            steps{
-                     publishHTML([allowMissing: false,
-                                  alwaysLinkToLastBuild: false, 
-                                  keepAll: false, 
-                                  reportDir: 'reports', 
-                                  reportFiles: 'TestExecutionReport.html', 
-                                  reportName: 'API HTML Regression Extent Report', 
-                                  reportTitles: ''])
-            }
-        }
-        
         
          stage("Deploy to STAGE"){
             steps{
@@ -81,26 +69,15 @@ pipeline
         stage('Run Sanity API Automation Test') {
             steps {
                 catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
-                    git 'https://github.com/naveenanimation20/July2024APIFramework.git'
-                    sh "mvn clean test -Dsurefire.suiteXmlFiles=src/test/resources/testrunners/testng_sanity.xml"
+                    git 'https://github.com/sudheercreddy/RestAssuredFramework2024.git'
+                    sh "mvn clean test -Dsurefire.suiteXmlFiles=src/test/resources/testrunners/testng_sanityCICD.xml"
                     
                 }
             }
         }
         
         
-         stage('Publish Sanity Extent Report'){
-            steps{
-                     publishHTML([allowMissing: false,
-                                  alwaysLinkToLastBuild: false, 
-                                  keepAll: false, 
-                                  reportDir: 'reports', 
-                                  reportFiles: 'TestExecutionReport.html', 
-                                  reportName: 'API HTML Sanity Extent Report', 
-                                  reportTitles: ''])
-            }
-        }
-        
+         
         
         stage("Deploy to PROD"){
             steps{
