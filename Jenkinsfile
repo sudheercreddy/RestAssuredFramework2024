@@ -76,17 +76,9 @@ pipeline
             }
         }
         
-          stage('Publish STAG Allure Reports') {
-           steps {
-                script {
-                    allure([
-                        includeProperties: false,
-                        jdk: '',
-                        properties: [],
-                        reportBuildPolicy: 'ALWAYS',
-                        results: [[path: '/allure-results']]
-                    ])
-                }
+        stage("Stage Report Allure"){
+            steps{
+                echo("deploy to qa done")
             }
         }
          
