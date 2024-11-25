@@ -76,9 +76,9 @@ pipeline
             }
         }
         
-        stage("Stage Report Allure"){
+        stage("Publish STAG  Allure Reports"){
             steps{
-                echo("deploy to qa done")
+                echo("Publish STAG  Allure Reports")
             }
         }
          
