@@ -44,7 +44,7 @@ pipeline
         }
                 
      
-        stage('Publish Allure Reports') {
+        stage('Publish QA Allure Reports') {
            steps {
                 script {
                     allure([
@@ -76,7 +76,19 @@ pipeline
             }
         }
         
-        
+          stage('Publish STAG Allure Reports') {
+           steps {
+                script {
+                    allure([
+                        includeProperties: false,
+                        jdk: '',
+                        properties: [],
+                        reportBuildPolicy: 'ALWAYS',
+                        results: [[path: '/allure-results']]
+                    ])
+                }
+            }
+        }
          
         
         stage("Deploy to PROD"){
