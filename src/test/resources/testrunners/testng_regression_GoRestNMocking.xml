@@ -97,7 +97,14 @@
 	</test>
 	
 	
-	
+	<!-- 	2025 TEST CASES //// -->
+	<test name="2025 USers go rest GET  APi Test">
+
+		<classes>
+			<class name="com.qa.api.gorestP.tests.ListUsers" />
+		</classes>
+		
+	</test>
 	
 	
 	

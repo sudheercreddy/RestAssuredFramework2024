@@ -32,6 +32,7 @@ public class BaseTest {
 	//************************************ENDPOINTS**********************************
 	
 	protected static final String BASE_URL_LOCALHOST_ENDPOINT = "/api/users";
+	protected static final String BASE_URL_LISTUSERS_ENDPOINT = "/public/v2/users";
 
 	protected RestClient restClient;
 
